@@ -1,4 +1,6 @@
+import { AngularFireDatabaseModule } from '@angularfire2/database';
 import { Component } from '@angular/core';
+import { AngularFireDatabase } from "angularfire2/database";
 
 interface MovieQuote {
   movie: string;
@@ -22,6 +24,10 @@ export class AppComponent {
     { "movie": "Titanic", "quote": "I'm the king of the world!" },
     { "movie": "The Princess Bride", "quote": "Hello. My name is Inigo Montoya. You killed my father. Prepare to die." }
   ];
+
+  constructor(db: AngularFireDatabase) {
+
+  }
 
   onSubmit(): void {
     console.log("TODO submit:", this.formMovieQuote);
